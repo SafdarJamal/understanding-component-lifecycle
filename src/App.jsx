@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import PrimaryButton from './components/PrimaryButton.jsx';
+import UIButton from './components/UIButton.jsx';
 
 class App extends Component {
   render() {
@@ -8,7 +10,9 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <button className="ui button">Hello React</button>
+          <PrimaryButton />
+          <br />
+          <UIButton />
         </header>
       </div>
     );
