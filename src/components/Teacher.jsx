@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import PrimaryButton from './PrimaryButton.jsx';
+import PrimaryButton from './PrimaryButton.jsx';
 
 class Teacher extends Component {
   constructor() {
@@ -13,7 +13,9 @@ class Teacher extends Component {
   }
 
   render() {
-    return <button onClick={this.sendDataToKid}>Get Help From Teacher</button>;
+    return (
+      <PrimaryButton func={this.sendDataToKid} text="Get Help From Teacher" />
+    );
   }
 }
 
