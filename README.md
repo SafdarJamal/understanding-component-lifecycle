@@ -1,5 +1,7 @@
 # Understanding Component Lifecycle
 
+[Assignment Link](https://docs.google.com/document/d/11yl7rGyB1pBtemXZMv-DX6RP6Lq9PHAbWFJL6IxRr18/edit)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
