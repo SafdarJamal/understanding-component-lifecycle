@@ -6,6 +6,7 @@ import './App.css';
 // import Social from './components/Social.jsx';
 // import UIButton from './components/UIButton.jsx';
 import Kid from './components/Kid.jsx';
+import Teacher from './components/Teacher.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -13,19 +14,26 @@ class App extends Component {
     this.state = {
       volume: 0
     };
+
+    this.updateDanceSteps = this.updateDanceSteps.bind(this);
   }
 
   static getDerivedStateFromProps(props, state) {
     return { volume: 5 };
   }
 
+  updateDanceSteps(furtherSteps) {
+    this.setState({ furtherSteps });
+  }
   render() {
-    const { volume } = this.state;
-    console.log(volume);
+    const { volume, furtherSteps } = this.state;
+    console.log(furtherSteps);
     return (
-      <div className="App">
+      <div className="App App-header">
         <header className="App-header">
-          <Kid dressColor="green" />
+          <Kid dressColor="green" furtherSteps={furtherSteps} />
+          <br />
+          <Teacher updateDanceSteps={this.updateDanceSteps} />
         </header>
       </div>
     );

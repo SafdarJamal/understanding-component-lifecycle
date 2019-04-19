@@ -2,9 +2,14 @@ import React, { Component } from 'react';
 import PrimaryButton from './PrimaryButton.jsx';
 
 class Teacher extends React.Component {
+  constructor() {
+    super();
+    this.sendDataToKid = this.sendDataToKid.bind(this);
+  }
   sendDataToKid() {
     const furtherSteps = ['step3', 'step4', 'step5'];
-    //Send this data to Kid.js
+    // console.log(this);
+    this.props.updateDanceSteps(furtherSteps);
   }
 
   render() {
