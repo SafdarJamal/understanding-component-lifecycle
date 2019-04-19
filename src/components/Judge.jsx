@@ -14,9 +14,18 @@ class Judge extends Component {
 
   provideStars() {
     const { stars } = this.state;
+    if (stars + 1 === 5) {
+      this.props.qualified();
+    }
     this.setState({ stars: stars + 1 });
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextState.stars > 5) {
+      return false;
+    }
+    return true;
+  }
   render() {
     const { stars, available } = this.state;
 

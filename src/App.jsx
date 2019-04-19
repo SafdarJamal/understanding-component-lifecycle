@@ -18,6 +18,7 @@ class App extends Component {
 
     this.updateDanceSteps = this.updateDanceSteps.bind(this);
     this.getApplaud = this.getApplaud.bind(this);
+    this.qualified = this.qualified.bind(this);
   }
 
   static getDerivedStateFromProps(props, state) {
@@ -32,9 +33,13 @@ class App extends Component {
     this.setState({ isApplauded: true });
   }
 
+  qualified() {
+    this.setState({ isQualified: true });
+  }
+
   render() {
-    const { volume, furtherSteps, isApplauded } = this.state;
-    console.log(isApplauded);
+    const { volume, furtherSteps, isApplauded, isQualified } = this.state;
+    // console.log(isQualified);
     return (
       <div className="App App-header">
         <header className="App-header">
@@ -42,12 +47,13 @@ class App extends Component {
             dressColor="green"
             furtherSteps={furtherSteps}
             isApplauded={isApplauded}
+            isQualified={isQualified}
           />
           <br />
           <Teacher updateDanceSteps={this.updateDanceSteps} />
           <br />
           <br />
-          <Judge getApplaud={this.getApplaud} />
+          <Judge getApplaud={this.getApplaud} qualified={this.qualified} />
         </header>
       </div>
     );

@@ -12,7 +12,7 @@ class Kid extends Component {
   }
 
   static getDerivedStateFromProps(props, state) {
-    console.log(props, state);
+    // console.log(props, state);
     if (props.furtherSteps.length && state.danceSteps.length !== 5) {
       return {
         danceSteps: state.danceSteps.concat(props.furtherSteps),
@@ -35,6 +35,13 @@ class Kid extends Component {
     this.setState({ danceSteps: ['step1', 'step2'] });
   }
 
+  componentDidUpdate() {
+    if (this.props.isQualified && this.state.startedPerforming) {
+      this.qualified();
+      return false;
+    }
+    return true;
+  }
   render() {
     const { dressColor } = this.props;
     const {
@@ -44,7 +51,7 @@ class Kid extends Component {
       currentStepIndex
     } = this.state;
 
-    console.log(danceSteps);
+    // console.log(danceSteps);
 
     return (
       <div>
