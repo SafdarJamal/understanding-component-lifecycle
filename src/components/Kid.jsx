@@ -15,6 +15,10 @@ class Kid extends Component {
     this.setState({ startedPerforming: false });
   }
 
+  componentDidMount() {
+    this.setState({ danceSteps: ['step1', 'step2'] });
+  }
+
   render() {
     const { dressColor } = this.props;
     const {
@@ -23,6 +27,8 @@ class Kid extends Component {
       startedPerforming,
       currentStepIndex
     } = this.state;
+
+    console.log(danceSteps);
 
     return (
       <div>
