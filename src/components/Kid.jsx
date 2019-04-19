@@ -19,6 +19,11 @@ class Kid extends Component {
         startedPerforming: true
       };
     }
+    if (props.isApplauded) {
+      return {
+        emotion: 'happy'
+      };
+    }
     return false;
   }
 

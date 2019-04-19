@@ -9,6 +9,7 @@ class Judge extends Component {
 
   applaud() {
     //Send this applaud status to Kid.js
+    this.props.getApplaud();
   }
 
   provideStars() {
@@ -24,9 +25,13 @@ class Judge extends Component {
         <button type="button" onClick={this.applaud.bind(this)}>
           Appreciate performance
         </button>
+        <br />
+        <br />
         <button type="button" onClick={this.provideStars.bind(this)}>
           Provide stars
         </button>
+        <br />
+        <br />
         Kid is available: {available}
         Stars gained: {stars}
       </div>
