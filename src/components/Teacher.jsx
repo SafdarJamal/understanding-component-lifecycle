@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import PrimaryButton from './PrimaryButton.jsx';
+// import PrimaryButton from './PrimaryButton.jsx';
 
-class Teacher extends React.Component {
+class Teacher extends Component {
   constructor() {
     super();
     this.sendDataToKid = this.sendDataToKid.bind(this);

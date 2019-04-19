@@ -42,6 +42,11 @@ class Kid extends Component {
     }
     return true;
   }
+
+  componentWillUnmount() {
+    this.props.unmountJudge();
+  }
+
   render() {
     const { dressColor } = this.props;
     const {
