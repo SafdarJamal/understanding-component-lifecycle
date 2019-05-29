@@ -1,6 +1,6 @@
 # Understanding React Component Lifecycle
 
-[Assignment Link](https://docs.google.com/document/d/1MWWTfeM2UgNbvTtNYK-ifc30FiABTA8RjVwCO8vS258/edit?usp=sharing)
+## [Assignment Link](https://docs.google.com/document/d/1MWWTfeM2UgNbvTtNYK-ifc30FiABTA8RjVwCO8vS258/edit?usp=sharing)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
