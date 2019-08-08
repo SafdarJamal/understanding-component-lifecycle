@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-// import PrimaryButton from './components/PrimaryButton.jsx';
-// import SecondaryButton from './components/SecondaryButton.jsx';
-// import Social from './components/Social.jsx';
-// import UIButton from './components/UIButton.jsx';
 
 import Kid from './Kid';
 import Teacher from './Teacher';
