@@ -34,6 +34,7 @@ class Judge extends Component {
 
     return (
       <div>
+        <br />
         <button type="button" onClick={this.applaud.bind(this)}>
           Appreciate performance
         </button>
@@ -42,7 +43,6 @@ class Judge extends Component {
         <button type="button" onClick={this.provideStars.bind(this)}>
           Provide stars
         </button>
-        <br />
         <br />
         Kid is available: {available}
         Stars gained: {stars}
