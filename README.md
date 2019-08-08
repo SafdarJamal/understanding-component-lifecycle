@@ -1,4 +1,4 @@
-# Understanding React Component Lifecycle
+# Understanding React Component Lifecycle Hooks
 
 ## [Assignment Link](https://docs.google.com/document/d/1MWWTfeM2UgNbvTtNYK-ifc30FiABTA8RjVwCO8vS258/edit?usp=sharing)
 
