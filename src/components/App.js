@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import './App.css';
-// import logo from './logo.svg';
 // import PrimaryButton from './components/PrimaryButton.jsx';
 // import SecondaryButton from './components/SecondaryButton.jsx';
 // import Social from './components/Social.jsx';
 // import UIButton from './components/UIButton.jsx';
-import Kid from './components/Kid.jsx';
-import Teacher from './components/Teacher.jsx';
-import Judge from './components/Judge.jsx';
+
+import Kid from './Kid';
+import Teacher from './Teacher';
+import Judge from './Judge';
 
 class App extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       volume: 0,
       isKidUnmount: false,
@@ -57,9 +58,11 @@ class App extends Component {
       isKidUnmount,
       isJudgeUnmount
     } = this.state;
+
     // console.log(isQualified);
+
     return (
-      <div className="App App-header">
+      <div className="App">
         <header className="App-header">
           {!isKidUnmount && (
             <Kid

@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 class Kid extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       emotion: 'nervous',
       danceSteps: [],
@@ -13,17 +14,20 @@ class Kid extends Component {
 
   static getDerivedStateFromProps(props, state) {
     // console.log(props, state);
+
     if (props.furtherSteps.length && state.danceSteps.length !== 5) {
       return {
         danceSteps: state.danceSteps.concat(props.furtherSteps),
         startedPerforming: true
       };
     }
+
     if (props.isApplauded) {
       return {
         emotion: 'happy'
       };
     }
+
     return false;
   }
 
@@ -40,6 +44,7 @@ class Kid extends Component {
       this.qualified();
       return false;
     }
+
     return true;
   }
 

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 class Judge extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = { stars: 0, available: false };
   }
@@ -14,9 +14,11 @@ class Judge extends Component {
 
   provideStars() {
     const { stars } = this.state;
+
     if (stars + 1 === 5) {
       this.props.qualified();
     }
+
     this.setState({ stars: stars + 1 });
   }
 
@@ -24,6 +26,7 @@ class Judge extends Component {
     if (nextState.stars > 5) {
       return false;
     }
+
     return true;
   }
   render() {
